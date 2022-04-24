@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="main" v-on:click.left="onleftclick" v-on:click.right.prevent="onrightclick">
+      ボタンの右クリックでコンテキストメニューを表示します。
+    </div>
+    <!-- コンテキストメニューの定義 -->
+    <ul class="cxt" v-bind:style="pos" v-show="show">
+      <li>ヘルプ</li>
+      <li>質問掲示板</li>
+      <li>よくある質問一覧</li>
+    </ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="../js/event_mousebtn.js"></script>
+</body>
+
+</html>
